@@ -11,9 +11,6 @@ module.exports = {
       judul: {
         type: Sequelize.STRING
       },
-      tgl: {
-        type: Sequelize.DATE
-      },
       direction: {
         type: Sequelize.TEXT
       },

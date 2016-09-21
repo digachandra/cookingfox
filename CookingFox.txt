@@ -97,9 +97,28 @@ a/e/d foto, a/e/d video)
 
 databases :
 - table myrecipes
+- table myrecipes_ingredient :
+
 - table myingredients
 - table ingredients
 - table ingredient_types
 - table cuisines
 - table mealtypes
-- table restrictions
+- xxx table restrictions
+
+
+Page Recipes
+1. image
+2. title
+3. level
+4. timePrep
+5. timeCook
+6. direction : text
+7. serving
+
+Home Page
+1. category : ingredients
+2. category : myingredients
+3. mealTipe
+4. cuisine
+5. judul + image
