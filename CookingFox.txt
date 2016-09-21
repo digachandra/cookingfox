@@ -96,25 +96,26 @@ a/e/d foto, a/e/d video)
 
 
 databases :
-- table myrecipes
-- table myrecipes_ingredient :
+ok 1. table Recipes : id, image, title, level, timepre, timecook, direction, serving, 
+2. table myrecipes_ingredient : id, measure, RecipeId, IngredientId
 
-- table myingredients
-- table ingredients
-- table ingredient_types
-- table cuisines
-- table mealtypes
-- xxx table restrictions
+3. table Ingredients : ingre, isSelected, ingreTypeId
+ok 4. table IngredientTypes : name
+ok 5. table CuisineType
+ok 6. table MealTypes
+xxx - table restrictions
 
 
 Page Recipes
 1. image
 2. title
 3. level
-4. timePrep
-5. timeCook
+4. timeprep
+5. timecook
 6. direction : text
 7. serving
+8. CuisineTypeId
+9. MealType
 
 Home Page
 1. category : ingredients

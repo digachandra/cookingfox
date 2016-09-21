@@ -1,6 +1,6 @@
 'use strict';
 module.exports = function(sequelize, DataTypes) {
-  var myrecipes = sequelize.define('myrecipes', {
+  var Recipes = sequelize.define('Recipes', {
     judul: DataTypes.STRING,
     tgl: DataTypes.DATE,
     direction: DataTypes.TEXT,
@@ -12,6 +12,7 @@ module.exports = function(sequelize, DataTypes) {
     classMethods: {
       associate: function(models) {
         // associations can be defined here
+
       }
     }
   });
