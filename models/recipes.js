@@ -1,8 +1,7 @@
 'use strict';
 module.exports = function(sequelize, DataTypes) {
   var Recipes = sequelize.define('Recipes', {
-    judul: DataTypes.STRING,
-    tgl: DataTypes.DATE,
+    title: DataTypes.STRING,
     direction: DataTypes.TEXT,
     level: DataTypes.STRING,
     cuisineTypeId: DataTypes.INTEGER,

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>Recipes Detail</h1>
+    <p><%= Recipes.level%></p>
+    <p><%= Recipes.timeprep%></p>
+    <p><%= Recipes.timecook%></p>
+    <p><%= Recipes.timeprep + Recipes.timecook%></p>
+    <p><%= Recipes.serving%></p>
+
+    <h3>Ingredients</h3>
+	<% for (var i=0; i < allIngre.length; i++) { %>
+		<p><%= allIngre[i]%> </p>
+	<% } %>
+
+
+    <h3>Direction:</h3>
+    <p><%= Recipes.direction%></p>
+
+
+   </body>
+</html>
+
+
