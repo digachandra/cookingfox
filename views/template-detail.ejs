@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+    <link rel="shortcut icon" href="/images/favicon.png" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Prompt" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="/stylesheets/template/style.css" />
+  </head>
+  <body class="layout-detail">
+    <section class="header">
+      <div class="container">
+        <div class="header-wrapper">
+          <a href="/template"><img class="logo" src="/images/logo_v2.png" /></a>
+        </div>
+      </div>
+    </section>
+    <section class="content">
+      <div class="container">
+        <div class="content-wrapper disable">
+          <div class="image-block" style="background-image:url('https://source.unsplash.com/FlmXvqlD-nI/800x400');"></div>
+        </div>
+        <div class="content-wrapper">
+          <div class="title-block text-center">
+            <h2 class="title">Cheese Stuffed Burger</h2>
+            <ul class="mini-detail">
+              <li>
+                <h5 class="text">Level</h5>
+                <h3 class="value">Easy</h3>
+              </li>
+              <li>
+                <h5 class="text">Prep</h5>
+                <h3 class="value">10m</h3>
+              </li>
+              <li>
+                <h5 class="text">Cook</h5>
+                <h3 class="value">10m</h3>
+              </li>
+              <li>
+                <h5 class="text">Ready in</h5>
+                <h3 class="value">20m</h3>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="content-wrapper detail-block">
+          <div class="row">
+            <div class="col-sm-4">
+              <h4 class="detail-title">List of Ingredients</h4>
+              <div class="detail-content">
+                <ul class="detail-list">
+                  <% for(var idx = 0; idx < 5; idx++){ %>
+                  <li>
+                    <a>
+                      <span class="fa-stack">
+                        <i class="fa fa-circle fa-stack-2x"></i>
+                        <i class="fa fa-check fa-stack-1x"></i>
+                      </span>Ingredient #<%= idx+1 %>
+                    </a>
+                  </li>
+                  <% } %>
+                </ul>
+              </div>
+            </div>
+            <div class="col-sm-8">
+              <h4 class="detail-title">Directions</h4>
+              <div class="detail-content">
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="footer">
+      <div class="container">
+        <p class="copyright text-center">
+          Copyright (c) 2016 Copyright Holder All Rights Reserved.<br />
+          Lilianti Wibiesono & Septhianto Diga
+        </p>
+      </div>
+    </section>
+    <section class="blank-layer hidden"></section>
+  </body>
+  <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script src="/javascripts/jquery.nanoscroller.min.js"></script>
+  <script src="/javascripts/main.js"></script>
+</html>
