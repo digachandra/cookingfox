@@ -28,7 +28,13 @@ module.exports = {
       },
       img: {
         type: Sequelize.STRING
-      },      
+      },
+      cuisineTypeId: {
+      	type: Sequelize.INTEGER
+      },
+      mealTypeId: {
+      	type: Sequelize.INTEGER
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

@@ -14,6 +14,9 @@ module.exports = {
       isSelected: {
         type: Sequelize.BOOLEAN
       },
+      ingredientTypeId: {
+      	type: Sequelize.INTEGER
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

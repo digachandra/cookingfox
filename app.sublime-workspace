@@ -1,0 +1,437 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"S",
+				"STRING"
+			],
+			[
+				"body",
+				"bodyParser"
+			],
+			[
+				"co",
+				"collection"
+			],
+			[
+				"mongo",
+				"MongoClient"
+			],
+			[
+				"group",
+				"group_id"
+			],
+			[
+				"contact",
+				"contact_id"
+			],
+			[
+				"create",
+				"createTableContacts"
+			],
+			[
+				"fo",
+				"FOREIGN"
+			],
+			[
+				"re",
+				"REFERENCES"
+			],
+			[
+				"cre",
+				"CREATE_TABLE_GROUPS"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"crea",
+				"CREATE_TABLE_CONTACTS"
+			],
+			[
+				"pr",
+				"PRIMARY"
+			],
+			[
+				"data",
+				"dataEmployees"
+			],
+			[
+				"log",
+				"login"
+			],
+			[
+				"da",
+				"dataEmployees"
+			],
+			[
+				"login",
+				"loginAuthentication"
+			],
+			[
+				"cons",
+				"console"
+			],
+			[
+				"p",
+				"prompt"
+			],
+			[
+				"pro",
+				"prompt"
+			],
+			[
+				"hos",
+				"myHospital"
+			],
+			[
+				"red",
+				"readl"
+			],
+			[
+				"rea",
+				"readline"
+			],
+			[
+				"_data",
+				"_dataRecords"
+			],
+			[
+				"read",
+				"readFileSync"
+			],
+			[
+				"_dat",
+				"_dataEmployees"
+			],
+			[
+				"pri",
+				"printNewLine"
+			],
+			[
+				"te",
+				"tempText"
+			],
+			[
+				"prin",
+				"printWelcomeHeader"
+			],
+			[
+				"con",
+				"console"
+			],
+			[
+				"le",
+				"length"
+			],
+			[
+				"st",
+				"startGame"
+			],
+			[
+				"nu",
+				"myNumber"
+			],
+			[
+				"show",
+				"showChances"
+			],
+			[
+				"ch",
+				"chance"
+			],
+			[
+				"i",
+				"innerHTML"
+			],
+			[
+				"gue",
+				"guessNumber"
+			],
+			[
+				"in",
+				"innerHTML"
+			],
+			[
+				"va",
+				"value"
+			],
+			[
+				"button",
+				"buttonGuess"
+			],
+			[
+				"Butt",
+				"buttonGuess"
+			],
+			[
+				"prev",
+				"prevSlide"
+			],
+			[
+				"image",
+				"imageRoot"
+			],
+			[
+				"font",
+				"fontWeight"
+			],
+			[
+				"make",
+				"makeItalic"
+			],
+			[
+				"mak",
+				"makeBold"
+			],
+			[
+				"fu",
+				"function"
+			],
+			[
+				"text",
+				"text2"
+			],
+			[
+				"get",
+				"getElementById"
+			],
+			[
+				"bu",
+				"buttonWarna"
+			],
+			[
+				"cli",
+				"clickListener"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/liliantiwibiesono/hacktiv8-temp/cookingfox/views/index.ejs",
+		"/Users/liliantiwibiesono/hacktiv8-temp/cookingfox/config/config.json",
+		"/Users/liliantiwibiesono/hacktiv8-temp/cookingfox/migrations/20160921135226-create-myrecipes.js",
+		"/Users/liliantiwibiesono/hacktiv8-temp/cookingfox/routes/ingre.js",
+		"/Users/liliantiwibiesono/hacktiv8-temp/cookingfox/routes/index.js",
+		"/Users/liliantiwibiesono/hacktiv8-temp/cookingfox/app.js",
+		"/Users/liliantiwibiesono/hacktiv8-temp/cookingfox/views/ingre.ejs.html",
+		"/Users/liliantiwibiesono/Dropbox/Hacktiv8 - Note/Materi Phase-1/NPM Sequelize",
+		"/Users/liliantiwibiesono/hacktiv8-temp/cookingfox/package.json",
+		"/Users/liliantiwibiesono/hacktiv8-temp/cookingfox/index.html",
+		"/Users/liliantiwibiesono/hacktiv8-temp/cookingfox/server.js",
+		"/Users/liliantiwibiesono/hacktiv8-temp/cookingfox/main.css",
+		"/Users/liliantiwibiesono/hacktiv8-temp/js-todos-2/data.json",
+		"/Users/liliantiwibiesono/hacktiv8-temp/js-todos-2/todos.js",
+		"/Users/liliantiwibiesono/hacktiv8-temp/address-book/setup.js",
+		"/Users/liliantiwibiesono/hacktiv8-temp/address-book-db-from-schema/setup.js",
+		"/Users/liliantiwibiesono/hacktiv8-temp/address-book-db-from-schema/address_book.js",
+		"/Users/liliantiwibiesono/hacktiv8-temp/address-book/address_book.js",
+		"/Users/liliantiwibiesono/hacktiv8-temp/hospital-interface/hospital.js",
+		"/Users/liliantiwibiesono/hacktiv8-temp/hospital-interface/patients.json",
+		"/Users/liliantiwibiesono/hacktiv8-temp/hospital-interface/records.json",
+		"/Users/liliantiwibiesono/hacktiv8-temp/hospital-interface/employees.json",
+		"/Users/liliantiwibiesono/hacktiv8-temp/hospital-interface/model.js",
+		"/Users/liliantiwibiesono/hacktiv8-temp/hospital-interface/view.js",
+		"/Users/liliantiwibiesono/hacktiv8-temp/hospital-interface/controller.js",
+		"/Users/liliantiwibiesono/hacktiv8-temp/hospital-interface/package.json",
+		"/Users/liliantiwibiesono/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/Users/liliantiwibiesono/hacktiv8/phase-1/js-todos-1/data.json",
+		"/Users/liliantiwibiesono/hacktiv8/phase-1/js-todos-1/todo.js",
+		"/Users/liliantiwibiesono/hacktiv8/phase-1/argv-basics/pig_latin.js",
+		"/Users/liliantiwibiesono/hacktiv8/phase-1/object-composition/kue.txt",
+		"/Users/liliantiwibiesono/hacktiv8/phase-1/object-composition/kue-backup.txt",
+		"/Users/liliantiwibiesono/hacktiv8/phase-1/object-composition/factory.js",
+		"/Users/liliantiwibiesono/Downloads/Atom.app/Contents/Info.plist",
+		"/Users/liliantiwibiesono/Sites/number-guess.html",
+		"/Users/liliantiwibiesono/Sites/index.html",
+		"/Users/liliantiwibiesono/Sites/gallery-slide.html",
+		"/Users/liliantiwibiesono/Sites/text-style-event.html",
+		"/Users/liliantiwibiesono/hacktiv8/phase-0/week-1/lilianti.github.io/rainbow-text.html",
+		"/Library/WebServer/Documents/index.html.en",
+		"/Users/liliantiwibiesono/hacktiv8/phase-0/week-1/lilianti.github.io/toDoList.html",
+		"/Users/liliantiwibiesono/hacktiv8/phase-0/week-1/lilianti.github.io/js/toDoList.js",
+		"/Users/liliantiwibiesono/hacktiv8/phase-0/week-1/lilianti.github.io/js/contactList.js",
+		"/Users/liliantiwibiesono/hacktiv8/phase-0/week-1/lilianti.github.io/contactList.html",
+		"/Users/liliantiwibiesono/hacktiv8/phase-0/week-1/lilianti.github.io/mainSuit.html",
+		"/Users/liliantiwibiesono/hacktiv8/phase-0/week-1/lilianti.github.io/js/mainSuit.js",
+		"/Users/liliantiwibiesono/hacktiv8/phase-0/week-1/lilianti.github.io/try.html",
+		"/Users/liliantiwibiesono/hacktiv8/phase-0/week-1/lilianti.github.io/js/math-basics.js",
+		"/Users/liliantiwibiesono/hacktiv8/phase-0/week-1/lilianti.github.io/java-math.html",
+		"/Users/liliantiwibiesono/hacktiv8/phase-0/week-1/lilianti.github.io/about.html",
+		"/Users/liliantiwibiesono/hacktiv8/phase-0/week-1/lilianti.github.io/story.html",
+		"/Users/liliantiwibiesono/hacktiv8/phase-0/week-1/lilianti.github.io/news/first_news.html",
+		"/Users/liliantiwibiesono/hacktiv8/phase-0/week-1/lilianti.github.io/index.html",
+		"/Users/liliantiwibiesono/hacktiv8/phase-0/week-1/lilianti.github.io/webdev.html",
+		"/Users/liliantiwibiesono/hacktiv8/phase-0/week-1/lilianti.github.io/wireframes.html",
+		"/Users/liliantiwibiesono/hacktiv8/phase-0/week-1/lilianti.github.io/core-values.html",
+		"/Users/liliantiwibiesono/hacktiv8/phase-0/week-1/lilianti.github.io/webeval.html",
+		"/Users/liliantiwibiesono/hacktiv8/phase-0/week-1/lilianti.github.io/webdesign.html",
+		"/Users/liliantiwibiesono/hacktiv8/phase-0/week-1/lilianti.github.io/styles/page-styles03.css",
+		"/Users/liliantiwibiesono/hacktiv8/phase-0/week-1/lilianti.github.io/styles/styles.css"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"db",
+			"let",
+			"readline",
+			"created",
+			"console.log",
+			"== ",
+			"8/12/2016]",
+			"work"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"var"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "app.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

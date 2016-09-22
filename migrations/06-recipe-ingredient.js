@@ -11,6 +11,12 @@ module.exports = {
       measure: {
         type: Sequelize.STRING
       },
+      recipeId: {
+        type: Sequelize.INTEGER
+      },
+      ingredientId: {
+        type: Sequelize.INTEGER
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

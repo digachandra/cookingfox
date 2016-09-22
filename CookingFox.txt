@@ -5,10 +5,10 @@
 
 1. Meat  : Beef, chicken, lamb, ham, ground beef,
 2. Fish  : Salmon, Groupa, Tuna
-3. Spice : salt, pepper, oregano, garlic powder, nutmeg, lemon grass, garlic,
+3. Spice : salt, pepper, oregano, sugar, garlic powder, nutmeg, lemon grass, garlic,
 onion, scallion
 4. Flour : terigu,  kanji, maizena
-5. Sauce : tomato sauce, chillie sauce, soy sauce, sweet soy sauce, tomato paste
+5. Sauce : tomato sauce, chillie sauce, soy sauce, sweet soy sauce, tomato paste, teriyaki sauce
 6. Nuts  : peanut, almond
 7. Milk  : Milk, coconut milk, almond milk
 8. Oil   : Olive oil, coconut oil, sesame oil

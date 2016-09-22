@@ -1,11 +1,34 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= title %></title>
+    <title></title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  </body>
+  	<h3>Ingredient Suggestions</h3>
+	<% for (var i=0; i<Ingredients.length; i++) { %>
+	<%	if (!Ingredients[i].dataValues.isSelected) { %>
+ 		<%= Ingredients[i].dataValues.name %>
+	<% }} %>  
+
+  	<h3>My Ingredient</h3>
+  	<% for (var i=0; i<Ingredients.length; i++) { %>
+	<%	if (Ingredients[i].dataValues.isSelected) { %>
+	 	<%= Ingredients[i].dataValues.name %>
+	<% }} %> 
+
+  	<h3>Meal Types</h3>
+  	<% for (var i=0; i<MealTypes.length; i++) { %>
+	 	<%= MealTypes[i].dataValues.name %>
+	<% } %> 
+
+ 	<h3>Cuisine Types</h3>
+  	<% for (var i=0; i<CuisineTypes.length; i++) { %>
+	 	<%= CuisineTypes[i].dataValues.name %>
+	<% } %> 
+
+   </body>
 </html>
+
+
+
