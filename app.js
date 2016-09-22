@@ -31,7 +31,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', routes);
 app.use('/template', template);
 
-app.listen(4000)
+app.listen(5000)
 console.log('Server is on!')
 
 // catch 404 and forward to error handler
