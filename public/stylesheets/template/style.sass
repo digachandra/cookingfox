@@ -1,0 +1,125 @@
+@import variable
+@import reset
+@import mixin
+
+*
+  font: 14px "Prompt", sans-serif
+
+html
+  background: $main-shade-3
+
+body
+  background: transparent
+
+section.header
+  position: fixed
+  width: 100%
+  top: 0px
+  z-index: 100
+  .container
+    +max-phone()
+      padding: 0px
+  .header-wrapper
+    background: $main-color-1
+    padding: 20px 0px
+    text-align: center
+  .action-wrapper
+    text-align: center
+    > .action-content
+      background: $main-shade-1
+      padding: 40px 20px
+      .accordion-wrapper
+        margin: 0px
+        .panel
+          border-radius: 0px
+          border: 0px
+          box-shadow: none
+          .panel-heading
+            background: transparent
+            text-align: left
+            a
+              font-size: 18px
+              font-weight: bold
+              text-decoration: none
+              .fa
+                color: $main-color-1
+          .panel-body
+            border: 0px
+            text-align: left
+        .wrapper-with-category
+          .title
+            color: #000
+            display: block
+            font-weight: bold
+            font-size: 15px
+            margin-bottom: 10px
+        .wrapper-with-category:nth-child(n+2)
+          margin-top: 20px
+    > a.action-trigger
+      background: $main-shade-1
+      color: #252525
+      display: block
+      font-weight: bold
+      letter-spacing: 0.5px
+      padding: 15px 0px
+      text-decoration: none
+      +transition(background, ease-in, 0.1s)
+    > a.action-trigger:hover, > a.action-trigger:focus
+      background: $main-color-2
+  img.logo
+    height: 50px
+
+section.content
+  .content-wrapper
+    padding: 170px 0px 50px
+  ul.list-wrapper
+    list-style: none
+    +min-tablet()
+      column-count: 3
+      column-gap: 1em
+    +max-phone()
+      column-count: 1
+    li
+      display: inline-block
+      margin: 0 0 1em
+      width: 100%
+      a
+        background: $main-shade-1
+        display: block
+        text-decoration: none
+        padding: 15px
+        +transition(all, ease-in, 0.2s)
+        .image
+          +background-cover($main-shade-2)
+          width: 100%
+          height: 200px
+        .desc
+          color: $main-color-1
+          margin: 15px 0px 0px
+          +transition(all, ease-in, 0.2s)
+          .title
+            font-weight: bold
+      a:hover, a:focus
+        background: $main-color-1
+        .desc
+          color: $main-shade-1
+
+section.footer
+  padding: 20px 0px
+  p.copyright
+    font-size: 10px
+    margin: 0px
+    opacity: 0.5
+    padding: 0px
+
+.btn.btn-cf-1
+  background: $main-color-1
+  border-color: $main-color-1
+  color: $main-shade-1
+  +transition(all, ease-in, 0.1s)
+  .fa:first-child
+    margin-right: 5px
+
+.btn.btn-cf-1:hover, .btn.btn-cf-1:focus
+  background: $main-shade-1
+  color: $main-color-1

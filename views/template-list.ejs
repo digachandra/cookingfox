@@ -4,13 +4,91 @@
     <title><%= title %></title>
     <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
     <link rel="shortcut icon" href="/images/favicon.png" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Prompt">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" href="/stylesheets/template.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Prompt" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="/stylesheets/template/style.css" />
   </head>
   <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+    <section class="header">
+      <div class="container">
+        <div class="header-wrapper">
+          <img class="logo" src="/images/logo_v2.png" />
+        </div>
+        <div class="action-wrapper">
+          <div class="action-content">
+            <div class="panel-group accordion-wrapper" role="tablist" aria-multiselectable="true">
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab">
+                  <h4 class="panel-title">
+                  <a role="button" data-toggle="collapse" href="#action-collapse-one" aria-expanded="true" aria-controls="action-collapse-one">
+                    <i class="fa fa-chevron-down" aria-hidden="true"></i> Ingredients Suggestions
+                  </a>
+                  </h4>
+                </div>
+                <div id="action-collapse-one" class="panel-collapse collapse in" role="tabpanel">
+                  <div class="panel-body">
+                    <% for(var idx = 0; idx < 5; idx ++){ %>
+                    <button type="button" class="btn btn-cf-1"><i class="fa fa-plus" aria-hidden="true"></i> Suggestion #<%= idx+1 %></button>
+                    <% } %>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="panel-group accordion-wrapper" role="tablist" aria-multiselectable="true">
+              <div class="panel panel-default">
+                <div class="panel-heading" role="tab">
+                  <h4 class="panel-title">
+                  <a role="button" data-toggle="collapse" href="#action-collapse-two" aria-expanded="true" aria-controls="action-collapse-two">
+                    <i class="fa fa-chevron-down" aria-hidden="true"></i> My Kitchen
+                  </a>
+                  </h4>
+                </div>
+                <div id="action-collapse-two" class="panel-collapse collapse in" role="tabpanel">
+                  <div class="panel-body">
+                    <% for(var idx = 0; idx < 2; idx ++){ %>
+                    <div class="wrapper-with-category">
+                      <span class="title">Category <%=idx +1 %></span>
+                      <% for(var idy = 0; idy < 5; idy ++){ %>
+                      <button type="button" class="btn btn-cf-1"><i class="fa fa-plus" aria-hidden="true"></i> Suggestion #<%= idy+1 %></button>
+                      <% } %>
+                    </div>
+                    <% } %>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a class="action-trigger">Click here to filter your recipe</a>
+        </div>
+      </div>
+    </section>
+    <section class="content">
+      <div class="container">
+        <div class="content-wrapper">
+          <ul class="list-wrapper">
+            <% for(var idx = 0; idx < 15; idx++){ %>
+            <li>
+              <a href="#">
+                <div class="image" style="background-image:url('https://source.unsplash.com/FlmXvqlD-nI/800x400');"></div>
+                <p class="desc">
+                  <span class="title">Lorem ipsum</span>
+                </p>
+              </a>
+            </li>
+            <% } %>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="footer">
+      <div class="container">
+        <p class="copyright text-center">
+          Copyright (c) 2016 Copyright Holder All Rights Reserved.<br />
+          Lilianti Wibiesono & Septhianto Diga
+        </p>
+      </div>
+    </section>
   </body>
   <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
