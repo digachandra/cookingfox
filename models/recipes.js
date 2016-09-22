@@ -2,6 +2,7 @@
 module.exports = function(sequelize, DataTypes) {
   var Recipes = sequelize.define('Recipes', {
     title: DataTypes.STRING,
+    img: DataTypes.STRING,
     direction: DataTypes.TEXT,
     level: DataTypes.STRING,
     cuisineTypeId: DataTypes.INTEGER,

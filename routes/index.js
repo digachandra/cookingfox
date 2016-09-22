@@ -63,7 +63,6 @@ router.get('/recipes', function(req, res, next){
       id : req.query.id
     }
   }).then (function(resultRecipes){
-    console.log('hasil cari : ', resultRecipes.dataValues)
     if (resultRecipes) {
       models.RecipeIngredient.findAll({
         where : {
@@ -74,7 +73,6 @@ router.get('/recipes', function(req, res, next){
           var hasil = []
           for (var i=0; i<resultRecipeIngre.length; i++) {
             for (var j=0; j<resultIngredients.length; j++){
-              console.log('apa benar?', resultRecipeIngre[i].dataValues.ingredientId, resultIngredients[j].dataValues.id)
               if (resultRecipeIngre[i].dataValues.ingredientId == resultIngredients[j].dataValues.id) {
                 hasil[hasil.length] =  resultRecipeIngre[i].dataValues.measure + ' ' +resultIngredients[j].dataValues.name
               }
