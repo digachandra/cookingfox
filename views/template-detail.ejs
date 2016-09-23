@@ -20,27 +20,31 @@
     <section class="content">
       <div class="container">
         <div class="content-wrapper disable">
-          <div class="image-block" style="background-image:url('https://source.unsplash.com/FlmXvqlD-nI/800x400');"></div>
+          <div class="image-block" style="background-image:url('<%= Recipes.img %>');"></div>
         </div>
         <div class="content-wrapper">
           <div class="title-block text-center">
-            <h2 class="title">Cheese Stuffed Burger</h2>
+            <h2 class="title"><%= Recipes.title%></h2>
             <ul class="mini-detail">
               <li>
                 <h5 class="text">Level</h5>
-                <h3 class="value">Easy</h3>
+                <h3 class="value"><%= Recipes.level %></h3>
               </li>
               <li>
                 <h5 class="text">Prep</h5>
-                <h3 class="value">10m</h3>
+                <h3 class="value"><%= Recipes.timeprep%>m</h3>
               </li>
               <li>
                 <h5 class="text">Cook</h5>
-                <h3 class="value">10m</h3>
+                <h3 class="value"><%= Recipes.timecook%>m</h3>
               </li>
               <li>
                 <h5 class="text">Ready in</h5>
-                <h3 class="value">20m</h3>
+                <h3 class="value"><%= Recipes.timeprep + Recipes.timecook%>m</h3>
+              </li>
+              <li>
+                <h5 class="text">Serving</h5>
+                <h3 class="value"><%= Recipes.serving %></h3>
               </li>
             </ul>
           </div>
@@ -51,13 +55,13 @@
               <h4 class="detail-title">List of Ingredients</h4>
               <div class="detail-content">
                 <ul class="detail-list">
-                  <% for(var idx = 0; idx < 5; idx++){ %>
+                  <% for(var idx = 0; idx < allIngre.length; idx++){ %>
                   <li>
                     <a>
                       <span class="fa-stack">
                         <i class="fa fa-circle fa-stack-2x"></i>
                         <i class="fa fa-check fa-stack-1x"></i>
-                      </span>Ingredient #<%= idx+1 %>
+                      </span><%= allIngre[idx] %>
                     </a>
                   </li>
                   <% } %>
@@ -67,7 +71,7 @@
             <div class="col-sm-8">
               <h4 class="detail-title">Directions</h4>
               <div class="detail-content">
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                <p><%= Recipes.direction %></p>
               </div>
             </div>
           </div>

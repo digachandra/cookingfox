@@ -30,8 +30,42 @@ router.get('/', function(req, res, next){
   })
 });
 
-router.get('/:slug', function(req, res, next) {
-  res.render('template-detail', { title: 'Cooking Fox' });
+router.get('/:slug', function(req, res, next){
+  res.render('cms-list', {
+    title: 'Cooking Fox'
+  });
+});
+
+router.get('/:slug', function(req, res, next){
+  models.Recipes.find({
+    where: {
+      id: req.params.slug
+    }
+  }).then(function(resultRecipes){
+    if(resultRecipes){
+      models.RecipeIngredient.findAll({
+        where: {
+          recipeId: resultRecipes.id
+        }
+      }).then(function(resultRecipeIngre){
+        models.Ingredients.findAll({}).then(function(resultIngredients){
+          var hasil = []
+          for(var i=0; i<resultRecipeIngre.length; i++){
+            for(var j=0; j<resultIngredients.length; j++){
+              if(resultRecipeIngre[i].dataValues.ingredientId == resultIngredients[j].dataValues.id){
+                hasil[hasil.length] = resultRecipeIngre[i].dataValues.measure + ' ' +resultIngredients[j].dataValues.name
+              }
+            }
+          }
+          res.render('template-detail', {
+            title: 'Cooking Fox',
+            Recipes: resultRecipes.dataValues,
+            allIngre: hasil
+          });
+        })
+      })
+    }
+  })
 });
 
 module.exports = router;
