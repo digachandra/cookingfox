@@ -28,35 +28,6 @@ router.get('/', function(req, res, next) {
   })
 });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 router.get('/recipes', function(req, res, next){
   models.Recipes.find({
     where : {
