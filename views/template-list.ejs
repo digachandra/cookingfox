@@ -31,7 +31,7 @@
                     <div id="action-collapse-one" class="panel-collapse collapse in" role="tabpanel">
                       <div class="panel-body">
                         <% for(var idx = 0; idx < Ingredients.length; idx ++){ if(!Ingredients[idx].dataValues.isSelected){ %>
-                        <button type="button" class="btn btn-cf-1"><i class="fa fa-plus" aria-hidden="true"></i><%= Ingredients[idx].dataValues.name %></button>
+                        <button attr-id="<%= Ingredients[idx].dataValues.id %>" type="button" class="btn btn-cf-1"><i class="fa fa-plus" aria-hidden="true"></i><span><%= Ingredients[idx].dataValues.name %></span></button>
                         <% } } %>
                       </div>
                     </div>
@@ -60,7 +60,7 @@
                           </div>
                         </form>
                         <% for(var idx = 0; idx < Ingredients.length; idx ++){ if(Ingredients[idx].dataValues.isSelected){ %>
-                        <button type="button" class="btn btn-cf-1"><i class="fa fa-close" aria-hidden="true"></i><%= Ingredients[idx].dataValues.name %></button>
+                        <button attr-id="<%= Ingredients[idx].dataValues.id %>" type="button" class="btn btn-cf-1"><i class="fa fa-close" aria-hidden="true"></i><span><%= Ingredients[idx].dataValues.name %></span></button>
                         <% } } %>
                       </div>
                     </div>

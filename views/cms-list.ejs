@@ -21,11 +21,25 @@
       <div class="container">
         <div class="content-wrapper detail-block"><div class="row"><div class="col-sm-8 col-sm-offset-2 text-center">
           <p><strong>Content Management System</strong></p>
-          <a href="/cms/asd" class="btn btn-cf-1">Add new Recipe</a>
           <hr />
-          <ul>
-            <li></li>
-          </ul>
+          <div id="test-ingredient">
+            <form id="form-ingredient" class="form-inline" action="/template/cms/ingredient/add" method="POST">
+              <input type="hidden" id="txt-ingredient-id" name="ingredientid" value=null />
+              <div class="form-group">
+                  <input type="text" class="form-control" id="txt-ingredient-name" name="ingredientname" placeholder="Ingredient Name">
+              </div>
+              <button id="btn-ingredient" type="submit" class="btn btn-cf-1">Add</button>
+            </form>
+            <hr />
+            <ul style="list-style:none;">
+              <% for(var idx = 0; idx < resultIngredients.length; idx++){ %>
+              <li class="text-left" style="display:inline-block;padding:10px;width:49%">
+                <%= resultIngredients[idx].dataValues.name %>
+                 | <a onClick="ingre_edit('<%= resultIngredients[idx].dataValues.id %>', '<%= resultIngredients[idx].dataValues.name %>')">Edit</a> | <a href="/template/cms/ingredient/<%= resultIngredients[idx].dataValues.id %>">Remove</a>
+              </li>
+              <% } %>
+            </ul>
+          </div>
         </div></div></div>
       </div>
     </section>
@@ -43,4 +57,12 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   <script src="/javascripts/jquery.nanoscroller.min.js"></script>
   <script src="/javascripts/main.js"></script>
+  <script>
+  function ingre_edit(id, name){
+    $("#form-ingredient").attr("action", "/template/cms/ingredient/edit")
+    $("#txt-ingredient-id").val(id)
+    $("#txt-ingredient-name").val(name)
+    $("#btn-ingredient").text("Update")
+  }
+  </script>
 </html>

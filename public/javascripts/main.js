@@ -14,6 +14,51 @@ function init_layout(){
     var p_blank_layer = p_layout_list.find("section.blank-layer")
     var p_content = p_layout_list.find("section.content")
 
+    var p_action_collapse_one = p_header.find("#action-collapse-one .panel-body")
+    var p_action_collapse_one_btn = p_action_collapse_one.find(".btn")
+
+    var p_action_collapse_two = p_header.find("#action-collapse-two .panel-body")
+    var p_action_collapse_two_btn = p_action_collapse_two.find(".btn")
+
+    function jquery_request(id, status, callback){
+      var data_new = {}
+
+      data_new.id = id
+      data_new.status = status
+
+      $.ajax({
+        url:"template/ingredient",
+        method:"PUT",
+        data:data_new,
+        dataType:"json",
+        type:"json",
+        success: function(data) {
+          callback(true)
+        }
+      });
+    }
+    p_action_collapse_one_btn.each(function(){
+      var pointer = $(this)
+      pointer.on("click", function(){
+        jquery_request(pointer.attr("attr-id"), true, function(result){
+          pointer.find(".fa").removeClass("fa-plus").addClass("fa-close")
+          pointer.remove();
+          p_action_collapse_two.append(pointer)
+        })
+      })
+    })
+
+    p_action_collapse_two_btn.each(function(){
+      var pointer = $(this)
+      pointer.on("click", function(){
+        jquery_request(pointer.attr("attr-id"), false, function(result){
+          pointer.find(".fa").removeClass("fa-close").addClass("fa-plus")
+          pointer.remove();
+          p_action_collapse_one.append(pointer)
+        })
+      })
+    });
+
     function expand(status){
       if(status){
         p_header_action_content.css({"margin-top": 0})
@@ -35,6 +80,7 @@ function init_layout(){
         expand(true)
       } else {
         expand(false)
+        location.reload()
       }
     })
     expand(false)

@@ -74,18 +74,69 @@ router.get('/', function(req, res, next){
   })
 });
 
+router.put('/ingredient', function(req, res, next){
+  models.Ingredients.find({
+    where: {
+      id: req.body.id
+    }
+  }).then(function(result){
+      if(result){
+        result.updateAttributes({
+          isSelected: req.body.status
+        }).then(function(result){
+          res.json(true)
+        })
+      }
+  })
+});
+
 router.get('/cms', function(req, res, next){
-  res.render('cms-list', {
-    title: 'Cooking Fox :: CMS'
+  models.Ingredients.findAll({
+  	order: 'name ASC'
+  }).then (function(resultIngredients){
+    res.render('cms-list', {
+      title: 'Cooking Fox :: CMS',
+      resultIngredients: resultIngredients
+    });
+  })
+});
+
+router.post('/cms/ingredient/edit', function(req, res, next){
+  models.Ingredients.find({
+    where: {
+      id: req.body.ingredientid
+    }
+  }).then(function(result){
+      if(result){
+        result.updateAttributes({
+          name: req.body.ingredientname
+        }).then(function(result){
+          res.redirect('/template/cms')
+        })
+      }
+  })
+});
+
+router.post('/cms/ingredient/add', function(req, res, next){
+  models.Ingredients.create({
+    name:req.body.ingredientname,
+    isSelected:false,
+    ingredientTypeId:1
+  }).then(function(){
+    res.redirect('/template/cms')
   });
 });
 
-router.get('/cms/:slug', function(req, res, next){
-  // res.render('cms-list', {
-  //   title: 'Cooking Fox'
-  // });
-  res.send("Asd")
+router.get('/cms/ingredient/:id', function(req, res, next){
+  models.Ingredients.destroy({
+    where: {
+      id:req.params.id
+    }
+  }).then(function(){
+    res.redirect('/template/cms')
+  });
 });
+
 
 router.get('/:slug', function(req, res, next){
   models.Recipes.find({
@@ -133,30 +184,26 @@ router.get('/test', function(req, res, next){
   dan angka 0 tidak dianggap sebagai angka ganjil.
   */
   function separateNumber(n){
-    var odd_number = ["0", "1", "3", "5", "7", "9"]
-
-    var temp_number_array = n.toString().split("")
+    var temp_number_array = n.toString()
     var temp_number_string = ""
 
     for(var idx = 0; idx < temp_number_array.length; idx++){
       temp_number_string += temp_number_array[idx]
 
       var odd_number_flag = 0
-      for(var idy = 0; idy < odd_number.length; idy++){
-        if(temp_number_string[idx] == odd_number[idy]){
-          odd_number_flag += 1
-        }
-        if(idx != 0){
-          if(temp_number_string[idx-1] == odd_number[idy])
+      if(temp_number_array[idx] % 2 != 0 && temp_number_array[idx] != 0){
+        odd_number_flag += 1
+        if(idx < temp_number_array.length-1){
+          if(temp_number_array[idx+1] %2 != 0 && temp_number_array[idx+1] != 0){
             odd_number_flag += 1
+          }
         }
       }
-
       if(odd_number_flag == 2) temp_number_string += "-"
     }
     console.log(temp_number_string)
   }
-  separateNumber(9113020675971081); //result: 9-1-1-302067-5-9-7-1081
+  separateNumber("9113020675971081"); //result: 9-1-1-302067-5-9-7-1081
 
   /*
    2. Buat sebuah function bernama indexPrima.
