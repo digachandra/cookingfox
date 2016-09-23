@@ -9,26 +9,35 @@
 	<% for (var i=0; i<Ingredients.length; i++) { %>
 	<%	if (!Ingredients[i].dataValues.isSelected) { %>
  		<%= Ingredients[i].dataValues.name %>
-	<% }} %>  
+	<% }} %>
 
   	<h3>My Ingredient</h3>
   	<% for (var i=0; i<Ingredients.length; i++) { %>
 	<%	if (Ingredients[i].dataValues.isSelected) { %>
 	 	<%= Ingredients[i].dataValues.name %>
-	<% }} %> 
+	<% }} %>
 
   	<h3>Meal Types</h3>
   	<% for (var i=0; i<MealTypes.length; i++) { %>
 	 	<%= MealTypes[i].dataValues.name %>
-	<% } %> 
+	<% } %>
 
  	<h3>Cuisine Types</h3>
   	<% for (var i=0; i<CuisineTypes.length; i++) { %>
 	 	<%= CuisineTypes[i].dataValues.name %>
-	<% } %> 
+	<% } %>
+
+  <h3>Available Recipes</h3>
+
+ <% for (var i=0; i<availRecipes.length; i++){
+    for (var j=0; j<Recipes.length; j++) {
+        if (availRecipes[i] == Recipes[j].dataValues.id) { %>
+        <p><%= Recipes[j].dataValues.title%>
+        <%= Recipes[j].dataValues.img%></p>
+
+ <%       }
+    }
+  } %>
 
    </body>
 </html>
-
-
-

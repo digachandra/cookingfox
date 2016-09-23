@@ -115,16 +115,16 @@
       <div class="container">
         <div class="content-wrapper">
           <ul class="list-wrapper">
-            <% for(var idx = 0; idx < 15; idx++){ %>
+            <% for(var idx = 0; idx < availRecipes.length; idx++){ for(var idy=0; idy < Recipes.length; idy++) { if(availRecipes[idx] == Recipes[idy].dataValues.id) { %>
             <li>
-              <a href="/template/14">
-                <div class="image" style="background-image:url('https://source.unsplash.com/FlmXvqlD-nI/800x400');"></div>
+              <a href="/template/<%= Recipes[idy].dataValues.id %>">
+                <div class="image" style="background-image:url('<%= Recipes[idy].dataValues.img %>');"></div>
                 <p class="desc">
-                  <span class="title">Lorem ipsum</span>
+                  <span class="title"><%= Recipes[idy].dataValues.title %></span>
                 </p>
               </a>
             </li>
-            <% } %>
+            <% } } } %>
           </ul>
         </div>
       </div>

@@ -5,7 +5,7 @@ let models = require('../models')
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  
+
   models.Ingredients.findAll({
   	order : 'name ASC'
   }).then (function(resultIngredients) {
@@ -19,9 +19,53 @@ router.get('/', function(req, res, next) {
   	 	}). then (function(resultMealTypes) {
 
   	 		models.CuisineTypes.findAll({
-  	 		  order : 'name ASC' 
+  	 		  order : 'name ASC'
   	 		}). then (function(resultCuisineTypes){
-		  	 	res.render('index', { Ingredients: resultIngredients, IngredientTypes : resultIngredientTypes, MealTypes: resultMealTypes, CuisineTypes: resultCuisineTypes});
+
+          models.Recipes.findAll({
+          }). then (function(resultRecipes){
+
+            models.RecipeIngredient.findAll({
+            }).then (function(resultRecipeIngre){
+
+            //find recipes yang cocok dengan  my ingredient /isSelected
+              var availRecipes = [] // utk simpan id recipes yang bisa dimasak
+              for (var i=0; i<resultRecipes.length; i++) {
+
+
+                //buat list ingredient per resep
+                var listIngre = []
+                for (var j=0; j<resultRecipeIngre.length; j++) {
+                  if (resultRecipes[i].dataValues.id == resultRecipeIngre[j].dataValues.recipeId) {
+                    listIngre.push(resultRecipeIngre[j].dataValues.ingredientId)
+                  }
+                }
+
+                //cek apa listIngre ada yang false atau tidak
+                var isAvail = true
+                var idx = 0;
+
+                while (idx < listIngre.length && isAvail){
+                  var jdx = 0
+                  while (jdx < resultIngredients.length && isAvail) {
+                    if (listIngre[idx] == resultIngredients[jdx].dataValues.id && !resultIngredients[jdx].dataValues.isSelected) {
+                      isAvail = false
+                    } else {
+                      jdx++
+                    }
+                  }
+                  idx++
+                }
+                if (isAvail) {
+                  availRecipes.push(resultRecipes[i].dataValues.id)
+                }
+               }
+
+              console.log('Resep yang tersedia:', availRecipes)
+              res.render('index', { Recipes: resultRecipes, availRecipes: availRecipes, Ingredients: resultIngredients, IngredientTypes : resultIngredientTypes, MealTypes: resultMealTypes, CuisineTypes: resultCuisineTypes});
+
+            })
+          })
   	 		})
   	 	})
   	 })
@@ -53,7 +97,7 @@ router.get('/recipes', function(req, res, next){
 
           })
 
-      })   
+      })
     }
   })
 })
